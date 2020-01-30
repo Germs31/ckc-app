@@ -102,6 +102,11 @@ export default {
           to: '/'
         },
         {
+          icon: 'mdi-apps',
+          title: 'card',
+          to: '/card'
+        },
+        {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire'
