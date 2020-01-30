@@ -20,10 +20,13 @@
 export default {
   data() {
     return {
-      category: "",
-      title: "",
-      author: "",
-      description: "",
+        open: flase,
+        category: "",
+        title: "",
+        author: "",
+        description: "",
+        categories: ["Recently read books", "Favourite books", "Terrible Book"]
+
     };
   },
 }
