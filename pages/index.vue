@@ -86,7 +86,33 @@ export default {
       }
     });
   },
-  
+  methods: {
+    remove(category, index) {
+      if (category === "Recently read books") {
+        this.recentBooks.splice(index, 1);
+      }
+      if (category === "Favourite books") {
+        this.favouriteBooks.splice(index, 1);
+      }
+      if (category === "Best of the best") {
+        this.bestOfTheBest.splice(index, 1);
+      }
+    },
+    edit(item, index) {
+      if (item.category === "Recently read books") {
+        eventBus.$emit("open-add-book-modal", item);
+        this.recentBooks.splice(index, 1);
+      }
+      if (item.category === "Favourite books") {
+        eventBus.$emit("open-add-book-modal", item);
+        this.favouriteBooks.splice(index, 1);
+      }
+      if (item.category === "Best of the best") {
+        eventBus.$emit("open-add-book-modal", item);
+        this.bestOfTheBest.splice(index, 1);
+      }
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
